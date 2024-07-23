@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bus Schedules</title>
+        <style>
+            h1 {
+                position: absolute;
+                top: 100px;
+                left: 43%;
+            }
+            table {
+                position: absolute;
+                top: 200px;
+                left: 450px;
+            }
+        </style>
+    </head>
+    <body>
+       <h1>Bus Schedules</h1>
+       <table border='1'>
+        <tr>
+            <th>No</th>
+            <th>Start Point</th>
+            <th>End Point</th>
+            <th>Morning Start Time</th>
+            <th>Evening Start Time</th>
+        </tr>
+        {% for bus in bus_schedules %}
+            <tr>
+                <td>{{ bus.no }}</td>
+                <td>{{ bus.startpoint }}</td>
+                <td>{{ bus.endpoint }}</td>
+                <td>{{ bus.morningStartTime }}</td>
+                <td>{{ bus.eveningStartTime }}</td>
+            </tr>
+        {% endfor %}
+       </table>
+    </body>
+</html>

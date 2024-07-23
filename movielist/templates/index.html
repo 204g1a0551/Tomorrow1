@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movies List</title>
+        <style>
+            h1{
+                position: absolute;
+                top:100px;
+                left:43%;
+            }
+            table{
+                position: absolute;
+                top:200px;
+                left:450px;
+            }
+        </style>
+    </head>
+    <body>
+       <h1>Movies List in Table</h1>
+       <table border='1'>
+        <tr>
+            <th>Name</th>
+            <th>Hero</th>
+            <th>Director</th>
+            <th>Imdb</th>
+            <th>Release Year</th>
+        </tr>
+        {%for movie in movies%}
+            <tr>
+                <td>{{movie.name}}</td>
+                <td>{{movie.Hero}}</td>
+                <td>{{movie.Director}}</td>
+                <td>{{movie.Imdb}}</td>
+                <td>{{movie.ReleaseYear}}</td>
+            </tr>
+        {% endfor %}
+       </table>
+    </body>
+</html>
